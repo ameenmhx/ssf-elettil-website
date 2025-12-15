@@ -40,7 +40,10 @@ const IMAGES = [
   "img37.jpg",
   "img38.jpg",
   "img39.jpg",
-  "img40.jpg"
+  "img40.jpg",
+  "img41.jpg",
+  "img42.jpg"
+ 
   
 
 ];
