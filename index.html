@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="3vJ9Oc9_2IuYYMNWCIXB3ummMJwSNL0w9co-n6pJmH8" />
 
   <title>SSF Elettil Town Unit</title>
 
@@ -11,7 +13,7 @@
 
   <link rel="stylesheet" href="styles.css" />
   <!-- Font Awesome (for Instagram icon) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
@@ -20,63 +22,105 @@
 
 
 
+
 <body>
 
-  <!-- NAVBAR -->
   <header class="navbar">
-    <button class="nav-toggle" aria-label="menu">
-  ☰
-</button>
-    <div class="container nav-content">
-      <div class="logo">
-        <img src="assets/ssf-logo.png" alt="SSF Logo">
-        <span class="ssf-text">SSF</span>
-        <span class="unit-text">Elettil Town Unit</span>
+    <div class="nav-container">
+      <!-- LEFT: Logo + Name -->
+      <div class="nav-left">
+        <a href="#home" class="logo">
+          <img src="assets/ssf-logo.png" alt="SSF Logo">
+          <span>SSF ELETTIL TOWN UNIT</span>
+        </a>
       </div>
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#programs">Programs</a></li>
-          <li><a href="#leaders">Leaders</a></li>
-          <li><a href="#news">News</a></li>
-          <li><a href="#gallery-teaser">Gallery</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li class="nav-social">
-  <a href="https://instagram.com/ssfelettiltown" target="_blank">
-    <i class="fa-brands fa-instagram"></i>
-  </a>
-</li>
-
-
-          <li><a href="#join" class="btn-small">Join</a></li>
-        </ul>
+      <!-- CENTER: Navigation Links (Desktop) -->
+      <nav class="nav-center">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#leaders">Leaders</a>
+        <a href="#news">News</a>
+        <a href="#gallery-teaser">Gallery</a>
+        <a href="#contact">Contact</a>
       </nav>
+
+      <!-- RIGHT: Socials + Join (Desktop) -->
+      <div class="nav-right">
+        <div class="nav-socials">
+          <a href="https://instagram.com/ssfelettiltown" target="_blank" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://youtube.com/@ssfelettiltownunit" target="_blank" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+        <a href="#join" class="join-btn">Join</a>
+
+        <!-- Hamburger Menu (Mobile) -->
+        <button class="hamburger" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
-<div class="mobile-nav-overlay"></div>
+
+  <!-- Mobile Slide-in Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="logo">
+        <img src="assets/ssf-logo.png" alt="SSF Logo">
+        <span>SSF ELETTIL TOWN</span>
+      </div>
+      <button class="close-menu" aria-label="Close Menu">&times;</button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#leaders">Leaders</a>
+      <a href="#news">News</a>
+      <a href="#gallery-teaser">Gallery</a>
+      <a href="#contact">Contact</a>
+      <div class="nav-right">
+        <div class="nav-socials">
+          <a href="https://instagram.com/ssfelettiltown" target="_blank" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://youtube.com/@ssfelettiltownunit" target="_blank" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+        <a href="#join" class="join-btn">Join</a>
+
+    </nav>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
 
   <!-- HERO -->
   <section id="home" class="hero">
     <!-- small top-right logo inside hero -->
-<img src="assets/ssf-logo.png" alt="SSF logo" class="hero-small-logo">
+    <img src="assets/ssf-logo.png" alt="SSF logo" class="hero-small-logo">
 
     <div class="hero-video-wrap">
-  <video class="hero-video" autoplay muted loop playsinline poster="assets/video/hero-poster.jpg">
-    <source src="assets/video/hero.mp4" type="video/mp4">
-  </video>
+      <video class="hero-video" autoplay muted loop playsinline poster="assets/video/hero-poster.jpg">
+        <source src="assets/video/hero.mp4" type="video/mp4">
+      </video>
 
-  <!-- overlay to reduce brightness -->
-  <div class="video-overlay"></div>
-</div>
+      <!-- overlay to reduce brightness -->
+      <div class="video-overlay"></div>
+    </div>
 
     <div class="container hero-content">
-      
+
       <div class="hero-text">
         <h1>SSF ELETTIL TOWN UNIT</h1>
         <p>
-          A  student community dedicated to nurturing talent, fostering leadership, and promoting 
+          A student community dedicated to nurturing talent, fostering leadership, and promoting
           creativity and excellence through educational, cultural,
           and social initiatives across campuses and local communities.
         </p>
@@ -88,7 +132,7 @@
       </div>
 
       <div class="hero-image">
-        
+
       </div>
 
     </div>
@@ -99,9 +143,12 @@
     <div class="container">
       <h2>About Us</h2>
       <p class="section-intro">
-        The Sunni Students’ Federation (SSF) is a national student organization committed to developing and showcasing the intellectual, cultural, and artistic talents of students across the country.
-        With active units in every state, SSF plays a key role in shaping young minds and empowering them to grow as leaders and contributors to society.
-        Through diverse programs and initiatives, SSF cultivates a spirit of creativity, innovation, and excellence among students.
+        The Sunni Students’ Federation (SSF) is a national student organization committed to developing and showcasing
+        the intellectual, cultural, and artistic talents of students across the country.
+        With active units in every state, SSF plays a key role in shaping young minds and empowering them to grow as
+        leaders and contributors to society.
+        Through diverse programs and initiatives, SSF cultivates a spirit of creativity, innovation, and excellence
+        among students.
 
       </p>
 
@@ -109,21 +156,24 @@
         <div class="card">
           <h3>Our Mission</h3>
           <p>
-            To build skills, inspire leadership, support community action, and help students excel in wider competitions.
+            To build skills, inspire leadership, support community action, and help students excel in wider
+            competitions.
           </p>
         </div>
 
         <div class="card">
           <h3>Our Vision</h3>
           <p>
-            To empower students through creativity, leadership, community action, and opportunities that help them excel at every level.
+            To empower students through creativity, leadership, community action, and opportunities that help them excel
+            at every level.
           </p>
         </div>
 
         <div class="card">
           <h3>What We Do</h3>
           <p>
-            We conduct cultural and educational programs, offer skill and leadership training, support campus and community initiatives, and prepare students for major competitions.
+            We conduct cultural and educational programs, offer skill and leadership training, support campus and
+            community initiatives, and prepare students for major competitions.
           </p>
         </div>
       </div>
@@ -138,84 +188,92 @@
       <div class="card-grid">
         <div class="card">
           <h3>WEFI</h3>
-          <p>Collaborative learning sessions and diverse academic initiatives designed to enhance growth and build essential skills.</p>
+          <p>Collaborative learning sessions and diverse academic initiatives designed to enhance growth and build
+            essential skills.</p>
         </div>
 
         <div class="card">
           <h3>Sahithyotsav</h3>
-          <p>Sahithyotsav is an annual event conducted by SSF, featuring several art and literature competitions for students across India.</p>
+          <p>Sahithyotsav is an annual event conducted by SSF, featuring several art and literature competitions for
+            students across India.</p>
         </div>
 
         <div class="card">
           <h3>Risala Update</h3>
-          <p>Risala Update is a Malayalam digital platform delivering sharp insights on politics, culture, religion, and social issues.</p>
+          <p>Risala Update is a Malayalam digital platform delivering sharp insights on politics, culture, religion, and
+            social issues.</p>
         </div>
 
         <div class="card">
           <h3>Zumra</h3>
-          <p>It focuses on student development through spiritual meetings, outreach activities,  and various Islamic initiatives.</p>
+          <p>It focuses on student development through spiritual meetings, outreach activities, and various Islamic
+            initiatives.</p>
         </div>
 
         <div class="card">
           <h3>Let's Smile</h3>
-          <p>It is an SSF initiative that engages children through educational, value-based activities and community programs.</p>
+          <p>It is an SSF initiative that engages children through educational, value-based activities and community
+            programs.</p>
         </div>
 
         <div class="card">
           <h3>Profsummit</h3>
-          <p>It is a SSF program that equips professional students with future-ready skills and ethical values through expert-led sessions</p>
+          <p>It is a SSF program that equips professional students with future-ready skills and ethical values through
+            expert-led sessions</p>
         </div>
 
         <div class="card">
           <h3>Quality development</h3>
-          <p>It strengthens skills, values, and overall competence through structured action and continuous improvement.</p>
+          <p>It strengthens skills, values, and overall competence through structured action and continuous improvement.
+          </p>
         </div>
 
         <div class="card">
           <h3>Student's Secondary</h3>
-          <p>Dedicated to nurturing academic excellence, discipline, and ethical growth among secondary school students.</p>
+          <p>Dedicated to nurturing academic excellence, discipline, and ethical growth among secondary school students.
+          </p>
         </div>
 
-        
+
       </div>
     </div>
   </section>
 
   <!-- LEADERS -->
   <section id="leaders" class="section">
-  <div class="container">
-    <h2>Our Leadership</h2>
+    <div class="container">
+      <h2>Our Leadership</h2>
 
-    <div class="leader-grid">
-      <!-- PRESIDENT -->
-      <div class="leader-card">
-        <div class="leader-photo">
-          <img src="assets/leaders/president.jpg" alt="President Photo">
+      <div class="leader-grid">
+        <!-- PRESIDENT -->
+        <div class="leader-card">
+          <div class="leader-photo">
+            <img src="assets/leaders/president.jpg" alt="President Photo">
+          </div>
+          <h3>FAHEEM BUSTHANI</h3>
+          <p>President</p>
         </div>
-        <h3>FAHEEM BUSTHANI</h3>
-        <p>President</p>
-      </div>
 
-      <!-- GENERAL SECRETARY -->
-      <div class="leader-card">
-        <div class="leader-photo">
-          <img src="assets/leaders/secretary.jpg" alt="General Secretary Photo">
+        <!-- GENERAL SECRETARY -->
+        <div class="leader-card">
+          <div class="leader-photo">
+            <img src="assets/leaders/secretary.jpg" alt="General Secretary Photo">
+          </div>
+          <h3>AMEEN MUHAMMAD</h3>
+          <p>General Secretary</p>
         </div>
-        <h3>AMEEN MUHAMMAD</h3>
-        <p>General Secretary</p>
-      </div>
 
-      <!-- TREASURER -->
-      <div class="leader-card">
-        <div class="leader-photo">
-          <img src="assets/leaders/finance.jpg" alt="Treasurer Photo">
+        <!-- TREASURER -->
+        <div class="leader-card">
+          <div class="leader-photo">
+            <img src="assets/leaders/finance.jpg" alt="Treasurer Photo">
+          </div>
+          <h3>AQUIB</h3>
+          <p>Finance Secretary</p>
         </div>
-        <h3>AQUIB</h3>
-        <p>Finance Secretary</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- NEWS -->
   <section id="news" class="section section-alt">
@@ -224,24 +282,27 @@
 
       <div class="card-grid">
         <article class="card">
-  <h3>SSF Annual Unit Council</h3>
-  <p class="meta">07 December 2025 • Elettil</p>
-  <p>The 2025 SSF Elettil Town Unit Annual Council was held at Markaz Valley,Inaugurated by Jafar Saquafi, led by Nuhman Suraiji, with the annual report presented by Ameen.
+          <h3>SSF Annual Unit Council</h3>
+          <p class="meta">07 December 2025 • Elettil</p>
+          <p>The 2025 SSF Elettil Town Unit Annual Council was held at Markaz Valley,Inaugurated by Jafar Saquafi, led
+            by Nuhman Suraiji, with the annual report presented by Ameen.
 
-</article>
+        </article>
 
-<article class="card">
-  <h3>Halka</h3>
-  
-  <p>It conducts monthly programs focused on student development through spiritual sessions, outreach activities, and various Islamic initiatives
-.</p>
-</article>
+        <article class="card">
+          <h3>Halka</h3>
 
-<article class="card">
-  <h3>Let's Smile Membership</h3>
- 
-  <p>Campaigns encourage students and the community to actively participate by joining the Let’s Smile initiative.</p>
-</article>
+          <p>It conducts monthly programs focused on student development through spiritual sessions, outreach
+            activities, and various Islamic initiatives
+            .</p>
+        </article>
+
+        <article class="card">
+          <h3>Let's Smile Membership</h3>
+
+          <p>Campaigns encourage students and the community to actively participate by joining the Let’s Smile
+            initiative.</p>
+        </article>
 
       </div>
 
@@ -249,20 +310,20 @@
   </section>
 
   <!-- GALLERY -->
-<!-- ====== GALLERY (replace existing gallery section in index.html) ====== -->
-<section id="gallery-teaser" class="section">
+  <!-- ====== GALLERY (replace existing gallery section in index.html) ====== -->
+  <section id="gallery-teaser" class="section">
 
 
-  
-  <div class="container" style="text-align:center; padding:3.2rem 0;">
-    <h2>Gallery</h2>
-    <p style="color:#6b7280; margin-bottom:1.25rem;">
-      Click below to view full-resolution photos and download HD images.
-    </p>
 
-    <!-- single clickable banner that navigates to gallery page -->
-    <a href="gallery.html" class="gallery-banner" style="display:inline-block; text-decoration:none;">
-      <div style="
+    <div class="container" style="text-align:center; padding:3.2rem 0;">
+      <h2>Gallery</h2>
+      <p style="color:#6b7280; margin-bottom:1.25rem;">
+        Click below to view full-resolution photos and download HD images.
+      </p>
+
+      <!-- single clickable banner that navigates to gallery page -->
+      <a href="gallery.html" class="gallery-banner" style="display:inline-block; text-decoration:none;">
+        <div style="
         width:100%;
         max-width:1100px;
         margin:0 auto;
@@ -276,72 +337,84 @@
         justify-content:space-between;
         gap:18px;
       ">
-        <div style="flex:1; text-align:left;">
-          <strong style="font-size:1.05rem; color:#111827;">Open Photo Gallery</strong>
-          <div style="color:#6b7280; margin-top:6px; font-size:0.95rem;">High-resolution images • Click to view & download</div>
+          <div style="flex:1; text-align:left;">
+            <strong style="font-size:1.05rem; color:#111827;">Open Photo Gallery</strong>
+            <div style="color:#6b7280; margin-top:6px; font-size:0.95rem;">High-resolution images • Click to view &
+              download</div>
+          </div>
+          <div style="flex:0 0 220px; max-width:320px;">
+            <!-- optional preview image — replace with a real preview or leave as placeholder -->
+            <img src="assets/gallery/img1.jpg" alt="gallery preview"
+              style="width:100%; height:86px; object-fit:cover; border-radius:8px; border:1px solid #e6e9ef;">
+          </div>
         </div>
-        <div style="flex:0 0 220px; max-width:320px;">
-          <!-- optional preview image — replace with a real preview or leave as placeholder -->
-          <img src="assets/gallery/img1.jpg" alt="gallery preview" style="width:100%; height:86px; object-fit:cover; border-radius:8px; border:1px solid #e6e9ef;">
-        </div>
-      </div>
-    </a>
-  </div>
-</section>
-<!-- ====== END GALLERY TEASER ====== -->
+      </a>
+    </div>
+  </section>
+  <!-- ====== END GALLERY TEASER ====== -->
 
 
-<!-- ===== PREMIUM JOIN / CTA SECTION (replace existing #join) ===== -->
-<section id="join" class="cta-premium" aria-labelledby="joinHeading">
-  <!-- decorative gradient + overlay -->
-  <div class="cta-bg" aria-hidden="true">
-    <!-- subtle SVG wave at bottom -->
-    <svg class="cta-wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M0,40 C240,120 480,0 720,56 C960,112 1200,28 1440,64 L1440,120 L0,120 Z" fill="#ffffff" opacity="0.95"></path>
-    </svg>
-  </div>
-
-  <div class="cta-wrap container">
-    <div class="cta-left">
-      <h2 id="joinHeading">Become a Member</h2>
-      <p class="lead">Join SSF Elettil Town Unit and be part of a community committed to education, cultural growth, and meaningful social service. Members get priority access to events, mentorship, and certificates.</p>
-
-      <ul class="benefits" role="list">
-        <li class="benefit-card">
-          <svg class="benefit-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#ffffff" stroke-width="1.6" d="M12 2v6l4 2"></path></svg>
-          <strong>Priority Events</strong>
-          <span>Early access to workshops & drives</span>
-        </li>
-
-        <li class="benefit-card">
-          <svg class="benefit-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#ffffff" stroke-width="1.6" d="M12 3l7 6v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V9z"></path></svg>
-          <strong>Mentorship</strong>
-          <span>Guidance from seniors & alumni</span>
-        </li>
-
-        <li class="benefit-card">
-          <svg class="benefit-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="3" stroke="#ffffff" stroke-width="1.6" fill="none"/><path d="M4 20c2-4 6-6 8-6s6 2 8 6" stroke="#ffffff" stroke-width="1.6" fill="none"/></svg>
-          <strong>Certification</strong>
-          <span>Official certificates for programs</span>
-        </li>
-      </ul>
-
-      <div class="cta-actions">
-        <a href="#contact" class="cta-primary" id="openJoinModal">Join Now</a>
-        <a href="gallery.html" class="cta-ghost">View Gallery</a>
-      </div>
+  <!-- ===== PREMIUM JOIN / CTA SECTION (replace existing #join) ===== -->
+  <section id="join" class="cta-premium" aria-labelledby="joinHeading">
+    <!-- decorative gradient + overlay -->
+    <div class="cta-bg" aria-hidden="true">
+      <!-- subtle SVG wave at bottom -->
+      <svg class="cta-wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,40 C240,120 480,0 720,56 C960,112 1200,28 1440,64 L1440,120 L0,120 Z" fill="#ffffff" opacity="0.95">
+        </path>
+      </svg>
     </div>
 
-    <div class="cta-right" aria-hidden="true">
-      <!-- large decorative card / subtle glass -->
-      <div class="cta-card" aria-hidden="true">
-        <img src="assets/gallery/img1.jpg" alt="" class="cta-card-img">
-        <div class="cta-card-badge"> ♥️ </div>
+    <div class="cta-wrap container">
+      <div class="cta-left">
+        <h2 id="joinHeading">Become a Member</h2>
+        <p class="lead">Join SSF Elettil Town Unit and be part of a community committed to education, cultural growth,
+          and meaningful social service. Members get priority access to events, mentorship, and certificates.</p>
+
+        <ul class="benefits" role="list">
+          <li class="benefit-card">
+            <svg class="benefit-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="none" stroke="#ffffff" stroke-width="1.6" d="M12 2v6l4 2"></path>
+            </svg>
+            <strong>Priority Events</strong>
+            <span>Early access to workshops & drives</span>
+          </li>
+
+          <li class="benefit-card">
+            <svg class="benefit-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="none" stroke="#ffffff" stroke-width="1.6" d="M12 3l7 6v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V9z">
+              </path>
+            </svg>
+            <strong>Mentorship</strong>
+            <span>Guidance from seniors & alumni</span>
+          </li>
+
+          <li class="benefit-card">
+            <svg class="benefit-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="9" r="3" stroke="#ffffff" stroke-width="1.6" fill="none" />
+              <path d="M4 20c2-4 6-6 8-6s6 2 8 6" stroke="#ffffff" stroke-width="1.6" fill="none" />
+            </svg>
+            <strong>Certification</strong>
+            <span>Official certificates for programs</span>
+          </li>
+        </ul>
+
+        <div class="cta-actions">
+          <a href="#contact" class="cta-primary" id="openJoinModal">Join Now</a>
+          <a href="gallery.html" class="cta-ghost">View Gallery</a>
+        </div>
+      </div>
+
+      <div class="cta-right" aria-hidden="true">
+        <!-- large decorative card / subtle glass -->
+        <div class="cta-card" aria-hidden="true">
+          <img src="assets/gallery/img1.jpg" alt="" class="cta-card-img">
+          <div class="cta-card-badge"> ♥️ </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- ===== end premium join ===== -->
+  </section>
+  <!-- ===== end premium join ===== -->
 
 
 
@@ -350,12 +423,7 @@
     <div class="container">
       <h2>Contact Us</h2>
 
-      <form
-  id="contact-form"
-  class="contact-form"
-  action="https://formspree.io/f/mvgebzeq"
-  method="POST"
->
+      <form id="contact-form" class="contact-form" action="https://formspree.io/f/mvgebzeq" method="POST">
 
         <div class="form-group">
           <label for="name">Full Name</label>
@@ -369,7 +437,7 @@
 
         <div class="form-group">
           <label for="cf-phone">Phone Number</label>
-          <input id="cf-phone" name="phone" type="tel" inputmode="tel" pattern="^\+?\d{7,15}$"/>
+          <input id="cf-phone" name="phone" type="tel" inputmode="tel" pattern="^\+?\d{7,15}$" />
         </div>
 
         <div class="form-group">
@@ -384,66 +452,72 @@
   </section>
 
   <!-- PROFESSIONAL FOOTER (replace existing <footer>) -->
-<footer class="site-footer" role="contentinfo" aria-label="Footer">
-  <div class="footer-inner container">
-    <div class="footer-brand">
-      <img src="assets/ssf-logo.png" alt="SSF Elettil logo" class="footer-logo">
-      <div>
-        <strong class="footer-org">SSF Elettil Town Unit</strong>
-        <div class="footer-tag">Student's Centre , Markaz valley - Elettil</div>
+  <footer class="site-footer" role="contentinfo" aria-label="Footer">
+    <div class="footer-inner container">
+      <div class="footer-brand">
+        <img src="assets/ssf-logo.png" alt="SSF Elettil logo" class="footer-logo">
+        <div>
+          <strong class="footer-org">SSF Elettil Town Unit</strong>
+          <div class="footer-tag">Student's Centre , Markaz valley - Elettil</div>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#programs">Programs</a></li>
+          <li><a href="index.html#leaders">Leaders</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+
+
+      <div class="footer-partners">
+
+        <div class="footer-logo-row">
+          <div class="footer-logo-card"><img src="assets/footer-logos/logo1.png" alt="Partner 1"></div>
+          <div class="footer-logo-card"><img src="assets/footer-logos/logo2.png" alt="Partner 2"></div>
+          <div class="footer-logo-card"><img src="assets/footer-logos/logo3.png" alt="Partner 3"></div>
+          <div class="footer-logo-card"><img src="assets/footer-logos/logo4.png" alt="Partner 4"></div>
+          <div class="footer-logo-card"><img src="assets/footer-logos/logo5.png" alt="Partner 4"></div>
+        </div>
+      </div>
+
+      <div class="footer-contact" aria-label="Contact info">
+
+        <div class="contact-row">✉️ <a href="mailto:ssfelettiltown@gmail.com">ssfelettiltown@gmail.com</a></div>
+
+        <div class="footer-social">
+          <a href="https://instagram.com/ssfelettiltown" target="_blank" rel="noopener" aria-label="SSF on Instagram"
+            class="social-link">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            <span class="sr-only">Instagram</span>
+          </a>
+
+          <a href="https://youtube.com/@ssfelettiltownunit?si=q67MJSEc6f-XGuqN" target="_blank" rel="noopener"
+            aria-label="SSF on YouTube" class="social-link">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <!-- Add more social icons here if needed -->
+
+        </div>
+
       </div>
     </div>
 
-    <nav class="footer-nav" aria-label="Footer navigation">
-      <ul>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#programs">Programs</a></li>
-        <li><a href="index.html#leaders">Leaders</a></li>
-        <li><a href="index.html#gallery">Gallery</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
 
 
-   
-<div class="footer-partners">
-  
-    <div class="footer-logo-row">
-        <div class="footer-logo-card"><img src="assets/footer-logos/logo1.png" alt="Partner 1"></div>
-        <div class="footer-logo-card"><img src="assets/footer-logos/logo2.png" alt="Partner 2"></div>
-        <div class="footer-logo-card"><img src="assets/footer-logos/logo3.png" alt="Partner 3"></div>
-        <div class="footer-logo-card"><img src="assets/footer-logos/logo4.png" alt="Partner 4"></div>
-        <div class="footer-logo-card"><img src="assets/footer-logos/logo5.png" alt="Partner 4"></div>
-    </div>
-</div>
 
-    <div class="footer-contact" aria-label="Contact info">
-      
-      <div class="contact-row">✉️ <a href="mailto:ssfelettiltown@gmail.com">ssfelettiltown@gmail.com</a></div>
-
-      <div class="footer-social">
-        <a href="https://instagram.com/ssfelettiltown" target="_blank" rel="noopener" aria-label="SSF on Instagram" class="social-link">
-          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-          <span class="sr-only">Instagram</span>
-        </a>
-
-        <!-- Add more social icons here if needed -->
-         
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <small>© <span id="year"></span> SSF Elettil Town Unit. All rights reserved.</small>
+        <a href="privacy.html" class="footer-legal">Privacy &amp; Terms</a>
       </div>
     </div>
-  </div>
-
-
-
-
-  <div class="footer-bottom">
-    <div class="container footer-bottom-inner">
-      <small>© <span id="year"></span> SSF Elettil Town Unit. All rights reserved.</small>
-      <a href="privacy.html" class="footer-legal">Privacy &amp; Terms</a>
-    </div>
-  </div>
-</footer>
-<!-- end footer -->
+  </footer>
+  <!-- end footer -->
 
 
   <script src="script.js"></script>

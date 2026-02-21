@@ -1,137 +1,105 @@
-const form = document.getElementById("contact-form");
-const statusEl = document.getElementById("form-status");
+/* =====================================================
+   GLOBAL READY
+   ===================================================== */
+document.addEventListener("DOMContentLoaded", () => {
 
-if (form) {
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+  /* =========================
+     CONTACT FORM
+     ========================= */
+  const form = document.getElementById("contact-form");
+  const statusEl = document.getElementById("form-status");
 
-    statusEl.textContent = "Sending...";
-    statusEl.style.color = "#2563eb";
+  if (form && statusEl) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
 
-    const formData = new FormData(form);
+      statusEl.textContent = "Sending...";
+      statusEl.style.color = "#2563eb";
 
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      });
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" }
+        });
 
-      if (response.ok) {
-        form.reset();
-        statusEl.textContent = "Thank you! Your message has been sent.";
-        statusEl.style.color = "#16a34a";
-      } else {
+        if (response.ok) {
+          form.reset();
+          statusEl.textContent = "Thank you! Your message has been sent.";
+          statusEl.style.color = "#16a34a";
+        } else {
+          throw new Error();
+        }
+      } catch {
         statusEl.textContent =
           "Something went wrong. Please try again later.";
         statusEl.style.color = "#dc2626";
       }
-    } catch (error) {
-      statusEl.textContent =
-        "Network error. Please check your connection and try again.";
-      statusEl.style.color = "#dc2626";
-    }
-  });
-}
-
-  const vid = document.querySelector('.hero-video');
-  if (vid) {
-    vid.playbackRate = 0.75;  // 45% speed (slow motion)
+    });
   }
 
-const yEl = document.getElementById('year');
-  if (yEl) yEl.textContent = new Date().getFullYear();
+
+  /* =========================
+     HERO VIDEO SPEED
+     ========================= */
+  const vid = document.querySelector(".hero-video");
+  if (vid) vid.playbackRate = 0.75;
 
 
-
- const toggle = document.querySelector('.nav-toggle');
-const nav = document.querySelector('.nav-links');
-const overlay = document.querySelector('.mobile-nav-overlay');
-
-toggle.addEventListener('click', () => {
-  nav.classList.toggle('active');
-  overlay.classList.toggle('show');
-});
-
-overlay.addEventListener('click', () => {
-  nav.classList.remove('active');
-  overlay.classList.remove('show');
-});
+  /* =========================
+     AUTO YEAR
+     ========================= */
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
 
 
-  document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector(".nav-links");
-  const overlay = document.querySelector(".mobile-nav-overlay");
-  const links = document.querySelectorAll(".nav-links a");
+  /* =========================
+     MOBILE MENU (Consolidated)
+     ========================= */
+  const hamburger = document.querySelector(".hamburger");
+  const closeBtn = document.querySelector(".close-menu");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const overlay = document.getElementById("overlay");
+  const mobileLinks = document.querySelectorAll(".mobile-nav-links a");
 
-  if (!toggle || !nav || !overlay) return;
+  if (hamburger && mobileMenu && overlay) {
+    const toggleMenu = (show) => {
+      mobileMenu.classList.toggle("show", show);
+      overlay.classList.toggle("show", show);
+      document.body.classList.toggle("menu-open", show);
+      hamburger.setAttribute("aria-expanded", show);
+    };
 
-  function openMenu() {
-    nav.classList.add("open");
-    overlay.classList.add("show");
-    document.body.style.overflow = "hidden";
+    hamburger.addEventListener("click", () => toggleMenu(true));
+    
+    [closeBtn, overlay, ...mobileLinks].forEach(el => {
+      if (el) el.addEventListener("click", () => toggleMenu(false));
+    });
   }
 
-  function closeMenu() {
-    nav.classList.remove("open");
-    overlay.classList.remove("show");
-    document.body.style.overflow = "";
+  /* =========================
+     NAVBAR SCROLL EFFECT
+     ========================= */
+  const nav = document.querySelector(".navbar");
+  if (nav) {
+    window.addEventListener("scroll", () => {
+      nav.classList.toggle("scrolled", window.scrollY > 20);
+    }, { passive: true });
   }
 
-  toggle.addEventListener("click", () => {
-    nav.classList.contains("open") ? closeMenu() : openMenu();
-  });
-
-  links.forEach(link => {
-    link.addEventListener("click", closeMenu);
-  });
-
-  overlay.addEventListener("click", closeMenu);
 });
 
 
-window.addEventListener("hashchange", () => {
-  const nav = document.querySelector(".nav-links");
-  const overlay = document.querySelector(".mobile-nav-overlay");
+const btn = document.querySelector(".hamburger");
+const menu = document.getElementById("mobileMenu");
+const overlay = document.getElementById("overlay");
 
-  nav.classList.remove("open");
+btn.addEventListener("click",()=>{
+  menu.classList.toggle("show");
+  overlay.classList.toggle("show");
+});
+
+overlay.addEventListener("click",()=>{
+  menu.classList.remove("show");
   overlay.classList.remove("show");
-  document.body.style.overflow = "";
 });
-
-
-/* =========================
-   SCROLL REVEAL – CLEAN
-   ========================= */
-
-document.addEventListener("DOMContentLoaded", () => {
-  const reveals = document.querySelectorAll(".reveal");
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-          observer.unobserve(entry.target); // animate once only
-        }
-      });
-    },
-    {
-      threshold: 0.12,
-      rootMargin: "0px 0px -60px 0px",
-    }
-  );
-
-  reveals.forEach(el => observer.observe(el));
-});
-
-
-
-
-
-
-
-  
